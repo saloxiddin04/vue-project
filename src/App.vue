@@ -1,28 +1,68 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <!--header-->
+    <Header/>
+
+    <v-main>
+      <!--hero section-->
+
+      <Hero/>
+      <!--about section-->
+      <About/>
+
+      <!--portfolio section-->
+      <Portfolio/>
+
+      <!--project section-->
+      <Project/>
+
+      <!--gallery section-->
+      <Gallery/>
+
+      <!--contact section-->
+      <Contact/>
+
+      <!--footer section-->
+      <Footer/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Header from '@/components/Header';
+import Hero from "@/components/Hero";
+import About from "@/components/About"
+import Portfolio from "@/components/Portfolio";
+import Project from "@/components/Project";
+import Gallery from "@/components/Gallery";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
-</script>
+    Header,
+    Hero,
+    About,
+    Portfolio,
+    Project,
+    Gallery,
+    Contact,
+    Footer
+  },
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  data() {
+    return{
+      menus: [
+        {title: 'Home', route: 'home'},
+        {title: 'About Us', route: 'about-us'},
+        {title: 'Portfolio', route: 'portfolio'},
+        {title: 'Project', route: 'project'},
+        {title: 'Gallery', route: 'gallery'},
+        {title: 'Contact', route: 'contact'},
+      ]
+    }
+  }
+};
+</script>
