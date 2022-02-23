@@ -1,7 +1,7 @@
 <template>
   <v-container class="pt-15">
     <v-row>
-      <v-col lg="6">
+      <v-col lg="6" md="6">
         <h2 class="intro-text">Welcome to our Vuetify app</h2>
         <p class="description">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias dolorum, eaque fuga quasi ratione
@@ -23,7 +23,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   .intro-text {
     font-size: 60px;
     font-weight: bold;
@@ -35,5 +35,13 @@
     font-family: cursive;
     margin: 32px 0;
     color: #444444ba;
+  }
+  @media only screen and (max-width: 768px) {
+    .intro-text {
+      font-size: 35px;
+    }
+    .description {
+      font-size: 16px;
+    }
   }
 </style>

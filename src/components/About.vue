@@ -1,6 +1,6 @@
 <template>
-  <v-container class="d-flex">
-    <v-col lg="6">
+  <v-container class="d-flex my-15">
+    <v-col lg="6" md="6">
       <img width="100%" src="../assets/about.jpg" alt="">
     </v-col>
     <v-col lg="6">
@@ -44,3 +44,12 @@ export default {
   name: "AboutComponent"
 }
 </script>
+
+<style scoped>
+   @media only screen and (max-width: 768px) {
+     .container {
+       display: flex;
+       flex-direction: column;
+     }
+   }
+</style>

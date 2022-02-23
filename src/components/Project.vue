@@ -1,12 +1,12 @@
 <template>
   <v-container class="my-15">
-    <v-row justify="center">
+    <v-row justify="center" class="d-flex">
       <v-col lg="12" class="text-center">
         <v-subheader class="text-h4 justify-center">Projects</v-subheader>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, similique!</p>
       </v-col>
-      <v-col lg="4" v-for="project in 3" :key="project">
-        <v-card class="mx-auto my-12" max-width="374">
+      <v-col lg="6" md="6" v-for="project in 3" :key="project">
+        <v-card class="mx-auto my-12" >
           <v-img height="250"
                  src="https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></v-img>
           <v-card-title>Web Development</v-card-title>
@@ -39,3 +39,9 @@ export default {
   name: "ProjectComponent"
 }
 </script>
+
+<style>
+  .col {
+    flex-basis: auto;
+  }
+</style>

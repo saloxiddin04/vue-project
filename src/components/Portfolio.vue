@@ -5,7 +5,7 @@
         <v-subheader class="text-h4 justify-center">Portfolio</v-subheader>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, numquam?</p>
       </v-col>
-      <v-col lg="12">
+      <v-col lg="3" class="chip">
         <div class="text-center">
           <v-chip @click="activePortfolio = 'webapp'" :color="activePortfolio === 'webapp'? 'success': '' " class="mx-5">Web App</v-chip>
           <v-chip @click="activePortfolio = 'mobileapp'" :color="activePortfolio === 'mobileapp'? 'success': '' " class="mx-5">Mobile App</v-chip>
@@ -13,9 +13,9 @@
         </div>
       </v-col>
       <slot v-if="activePortfolio === 'webapp' ">
-        <v-col lg="3" v-for="(web,webindex) in webApps" :key="webindex">
+        <v-col lg="3" md="6" sm="12" v-for="(web,webindex) in webApps" :key="webindex">
           <v-card>
-            <v-img :src="web.image" class="white--text" gradient="to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5)" height="200px">
+            <v-img :src="web.image" class="white--text" gradient="to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5)">
               <v-card-title>{{web.title}}</v-card-title>
             </v-img>
           </v-card>
@@ -80,3 +80,14 @@
     }
   }
 </script>
+
+<style scoped>
+  @media only screen and (max-width: 768px) {
+    .chip {
+      flex-basis: auto;
+    }
+    .mx-5 {
+      margin: 5px!important;
+    }
+  }
+</style>
